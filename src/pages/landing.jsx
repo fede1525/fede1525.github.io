@@ -1,28 +1,28 @@
-import useState from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faJs, faReact, faBootstrap, faCss3Alt, faPython, faJava, faLinux, faGitAlt } from '@fortawesome/free-brands-svg-icons';
+import { Projects } from '../components/projects';
+import React from 'react';
 
 export const Landing = () => {
-    const [visible, setVisible] = useState(false)
-
-
-    const showIntro = () => {
-        setVisible(!visible)
-    }
-
     return (
         <div>
             <h2>Hi there!</h2>
-            <button onClick={showIntro}>...Who are you?</button>
-            <h3 >Glad you asked...</h3>
                 <p>
-                    My name is Federico, and I build software. I am a full-stack developer from Argentina, to the world.
-                    My first projects were games: first a chess game and then a Tetris clone, both using Java and Swing; but now I've pivoted
-                    to Web Development. I think the portability of the web make it ideal for delivery of tools and applications to users worldwide.  
-                    I believe that every single decision when creating something should be taken with the user being the top priority,
-                    taking shortcuts inevitably leads to more work and a worse experience for everyone involved.
-                    I've cultivated expertise with a wide variety of technologies, such as Javascript with the React framework, Python, Java and some dabbling in C.
+                    My name is Federico, and I build software. I am a web developer from Argentina.
                 </p>
-                <button>My projects</button>
-                <button>Some useless trivia</button>
+
+                <h4>My stack </h4>
+                <div className="stack-div">
+                    <span className="stack-list">
+                    <FontAwesomeIcon className="stack-icon" id="js-icon" icon={faJs} /> <FontAwesomeIcon className="stack-icon" id="react-icon" icon={faReact} /> <FontAwesomeIcon className="stack-icon" id="bootstrap-icon" icon={faBootstrap} /> 
+                    <FontAwesomeIcon className="stack-icon" id="css-icon" icon={faCss3Alt} /> <FontAwesomeIcon className="stack-icon" id="python-icon" icon={faPython} /> <FontAwesomeIcon className="stack-icon" id="java-icon" icon={faJava} /> 
+                    <FontAwesomeIcon className="stack-icon" id="linux-icon" icon={faLinux} /> <FontAwesomeIcon className="stack-icon" id="git-icon" icon={faGitAlt} />
+                    </span>
+                </div>
+                <div>
+                    <h4>My projects </h4>
+                    <Projects />
+                </div>
         </div>
     );
 }

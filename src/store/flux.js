@@ -16,7 +16,7 @@ const getState = ({ getStore, getActions, setStore }) => {
                         params.headers["Content-Type"] = "application/json";
                     }
 
-                    let resp = await fetch(url + params);
+                    let resp = await fetch(url, params);
 
                     if(!resp.ok){
                         console.error(resp.statusText)
