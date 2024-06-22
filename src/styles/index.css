@@ -1,8 +1,10 @@
 
 body {
-  background-color: #151233;
-  color: white;
-  text-align: center;
+  overflow: auto;
+  background: black;
+  background-size: 400% 400%;
+  user-select: none;
+  color: whitesmoke;
   font-size: 3vh;
   font-weight: 400;
   margin: 0;
@@ -13,51 +15,45 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+    margin-top: 100px;
+    text-align: center;
+}
+.summary {
+    border-width: 5px;
+    border-top: solid;
+    border-right: solid;
+    border-image: linear-gradient(to bottom, #EBD27E, #E6DEC3) 1;
+    margin-top: 100px;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 150px;
 }
 
-a {
-  color: white;
-  text-decoration: none;
+.service-list {
+    text-align: center;
+    border-width: 5px;
+    border-bottom: solid;
+    border-left: solid;
+    border-image: linear-gradient(to bottom, #EBD27E, #E6DEC3) 1;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.navbar {
-  background-color: black;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+h2 {
+    text-align: center;
 }
 
-.socialmedia {
-  display: flex;
-  align-items: center;
+.stack-div {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
 }
-
-.social-link {
-  margin: 0 30px;
-}
-
-.social-icon {
-  transition: transform 0.3s ease;
-}
-
-.social-link:hover .social-icon {
-  transform: scale(1.2);
-}
-
-.page-link{
-  transition: transform 0.3s ease;
-}
-
-a:hover .page-link{
-  transform: scale(1.2)
-}
-
 .stack-list {
-  border-style: outset;
-  border-color: blueviolet;
+  border-width: 5px;
+  border-style: solid;
+  border-image: linear-gradient(to top, #EBD27E, #E6DEC3) 1;
   padding: 5px;
   font-size: 6vh;
 }
@@ -76,7 +72,7 @@ a:hover .page-link{
   }
 
   to {
-    opacity: 0;
+    opacity: 0.2;
   }
   
 }
@@ -158,17 +154,22 @@ a:hover .page-link{
 }
 
 #linux-icon:hover {
-  animation: stand-out 1s;
+  animation: stand-out 1s infinite;
 }
 
 @keyframes stand-out {
-  from {
-    transform: scale(1);
-  }
+  
+    0% {
+        transform: scale(1);
+    }
 
-  to {
-    transform: scale(1.2) translateY(-20px);
-  }
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 #git-icon:hover {

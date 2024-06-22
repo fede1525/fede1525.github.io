@@ -1,14 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import {Link} from 'react-router-dom';
+import "../styles/navbar.css";
 
 export const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <div>
+            <div className="page-link">
                 <Link to="/">
-                    <p className="page-link">Home</p>
+                    Home
                 </Link>
             </div>
             <div className="socialmedia">
@@ -23,10 +24,15 @@ export const Navbar = () => {
                     </a>
                 </div>
             </div>
-            <div>
-                <Link to="/trivia">
-                    <p className="page-link">Trivia</p>
-                </Link>
+            <div className="nav-links">
+                <div className="page-link"> 
+                    <Link to="/projects">
+                         Projects
+                    </Link>
+                </div>
+                <div className="page-link">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=federicoresano1@gmail.com"> Contact</a>
+                </div>
             </div>
         </nav>
     );

@@ -1,0 +1,28 @@
+.projects-title {
+    text-align: center;
+    text-decoration: underline;
+    border-width: 5px;
+    border-image: linear-gradient(to bottom, #EBD27E, #E6DEC3) 1;   
+    border-bottom: solid;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+a {
+    margin-right: 30px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.card-link:hover {
+    transform: scale(1.2);
+}
+
+.project-grid {
+   display: grid; 
+   grid-template-columns: auto auto auto;
+   margin-right: 100px;
+   margin-left: 100px;
+   column-gap: 50px;
+   row-gap: 80px;
+}

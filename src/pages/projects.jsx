@@ -1,42 +1,46 @@
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Context from '../store/appContext';
-import {useContext, useState, useEffect} from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faRust} from '@fortawesome/free-brands-svg-icons';
+import "../styles/projects.css";
+import React from "react";
 
 export const Projects = () => {
 
-    const actions = useContext(Context)
-    const [repos, setRepos] = useState("")
-
-    useEffect(() => {
-        const fetchRepos = async () => {
-            let resp = await actions.apiFetch("https://api.github.com/users/fede1525/repos", "GET")
-
-            if (resp && !resp.error){
-                setRepos(resp)
-            }
-        };
-
-        fetchRepos();
-    }, [actions]);
-
-
     return (
         <div>
-            <h2>My projects</h2>
-            {repos.map((repo) => (
-                <Card key={repo.id}>
-                    <Card.Body>
-                        <Card.Title>
-                            {repo.name}
-                        </Card.Title>
-                        <Card.Text>
-                            {repo.description}
-                        </Card.Text>
-                        <Button href={repo.html_url}>Source code</Button>
-                    </Card.Body>
-                </Card>
-            ))}
+            <h1 className="projects-title">My projects</h1>
+               <div className="project-grid">
+                    <div className="box">
+                        <h3>Therapy Time</h3>
+                        <h5>Full stack scheduling app</h5>
+                        <p>Web application for managing patients, schedule, and payments</p>
+                        <a className="card-link" href="https://github.com/fede1525/Therapy-Time">Source code</a>
+                        <a className="card-link" href="https://www.youtube.com/watch?v=G2Ty1Y9_wTg">See it in action</a>
+                    </div>
+                    <div className="box">
+                        <h3>Multi-threaded server</h3>
+                        <h5>HTTP Server</h5>
+                        <p>HTTP server written in Rust <FontAwesomeIcon icon={faRust} style={{color: "#e66100",}}/> </p>
+                        <a className="card-link" href="https://github.com/fede1525/Multithread-server">Source code</a>
+                    </div>
+                    <div className="box">
+                        <h3>Personal web page</h3>
+                        <h5>Built using React</h5>
+                        <a className="card-link" href="https://github.com/fede1525/fede1525.github.io">Source code</a>
+                        <a className="card-link" href="https://fede1525.github.io/projects">Recursion!</a>
+                    </div>
+                    <div className="box">
+                        <h3>Star Wars API</h3>
+                        <h5>Using Python, Flask and PostgreSQL</h5>
+                        <p>API that provides infomation about Star Wars characters </p>
+                        <a className="card-link" href="https://github.com/fede1525/StarWars-Api">Source code</a>
+                    </div>
+                    <div className="box">
+                        <h3>Films API</h3>
+                        <h5>Built using Java, Spring, MongoDB and React</h5>
+                        <p>Web application that conveys information about films, including reviews</p>
+                        <a className="card-link" href="https://github.com/fede1525/films-api">Source code</a>
+                    </div>
+               </div>
         </div>
     );
 };
