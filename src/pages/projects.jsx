@@ -26,7 +26,7 @@ export const Projects = () => {
                         <h3>Personal web page</h3>
                         <h5>Built using React</h5>
                         <a className="card-link" href="https://github.com/fede1525/fede1525.github.io">Source code</a>
-                        <a className="card-link" href="https://fede1525.github.io/projects">Recursion!</a>
+                        <a className="card-link" href="https://fede1525-github-io.vercel.app/projects">Recursion!</a>
                     </div>
                     <div className="box">
                         <h3>Star Wars API</h3>
